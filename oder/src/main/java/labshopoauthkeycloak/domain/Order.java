@@ -1,7 +1,7 @@
-package labshopoauth-keycloak.domain;
+package labshopoauthkeycloak.domain;
 
-import labshopoauth-keycloak.domain.OrderPlaced;
-import labshopoauth-keycloak.OderApplication;
+import labshopoauthkeycloak.domain.OrderPlaced;
+import labshopoauthkeycloak.OderApplication;
 import javax.persistence.*;
 import java.util.List;
 import lombok.Data;

@@ -1,5 +1,5 @@
-package labshopoauth-keycloak.infra;
-import labshopoauth-keycloak.domain.*;
+package labshopoauthkeycloak.infra;
+import labshopoauthkeycloak.domain.*;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

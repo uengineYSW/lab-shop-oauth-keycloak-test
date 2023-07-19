@@ -1,7 +1,7 @@
-package labshopoauth-keycloak.common;
+package labshopoauthkeycloak.common;
 
 
-import labshopoauth-keycloak.OderApplication;
+import labshopoauthkeycloak.OderApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 

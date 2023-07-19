@@ -1,7 +1,7 @@
-package labshopoauth-keycloak.domain;
+package labshopoauthkeycloak.domain;
 
-import labshopoauth-keycloak.domain.*;
-import labshopoauth-keycloak.infra.AbstractEvent;
+import labshopoauthkeycloak.domain.*;
+import labshopoauthkeycloak.infra.AbstractEvent;
 import java.util.*;
 import lombok.*;
 

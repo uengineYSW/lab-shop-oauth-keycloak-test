@@ -1,7 +1,7 @@
-package labshopoauth-keycloak.infra;
+package labshopoauthkeycloak.infra;
 
-import labshopoauth-keycloak.OderApplication;
-import labshopoauth-keycloak.config.kafka.KafkaProcessor;
+import labshopoauthkeycloak.OderApplication;
+import labshopoauthkeycloak.config.kafka.KafkaProcessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

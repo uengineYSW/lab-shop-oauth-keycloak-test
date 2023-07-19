@@ -6,7 +6,7 @@ server:
 
 
 keycloak-client:
-  server-url: https://9090-uengineysw-labshopoauth-nkjrzwwmprt.ws-us101.gitpod.io/
+  server-url: https://localhost:9090
   realm: master
 
 

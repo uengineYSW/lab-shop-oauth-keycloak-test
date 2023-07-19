@@ -1,6 +1,6 @@
-package labshopoauth-keycloak.domain;
+package labshopoauthkeycloak.domain;
 
-import labshopoauth-keycloak.domain.*;
+import labshopoauthkeycloak.domain.*;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
