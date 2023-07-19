@@ -1,18 +1,20 @@
 server:
   port: 8080
-spring:
-  application:
-    name: inventory
 ---
-
 spring:
-  profiles: default
+  config:
+    activate:
+      on-profile: default
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/master/protocol/openid-connect/certs
   jpa:
     properties:
       hibernate:
         show_sql: true
         format_sql: true
-        implicit_naming_strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
   cloud:
     stream:
       kafka:
@@ -29,30 +31,42 @@ spring:
       bindings:
         event-in:
           group: inventory
-          destination: labshopoauthkeycloak
+          destination: labshopoauth-keycloak
           contentType: application/json
         event-out:
-          destination: labshopoauthkeycloak
+          destination: labshopoauth-keycloak
           contentType: application/json
-
 logging:
   level:
-    org.hibernate.type: trace
-    org.springframework.cloud: debug
+    org.hibernate.type: info
+    org.springframework.cloud: info
+    org.springframework.security: debug    
 
 
 server:
-  port: 0
+  port: 8082
+
 
 ---
-
 spring:
-  profiles: docker
+  config:
+    activate:
+      on-profile: docker
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak.keycloak:80/realms/my_realm/protocol/openid-connect/certs
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
   cloud:
     stream:
       kafka:
         binder:
-          brokers: my-kafka:9092
+          brokers: my-kafka.kafka:9092
         streams:
           binder:
             configuration:
@@ -64,10 +78,18 @@ spring:
       bindings:
         event-in:
           group: inventory
-          destination: labshopoauthkeycloak
+          destination: labshopoauth-keycloak
           contentType: application/json
         event-out:
-          destination: labshopoauthkeycloak
+          destination: labshopoauth-keycloak
           contentType: application/json
+logging:
+  level:
+    org.hibernate.type: trace
+    org.springframework.cloud: debug
+
+
+
+
 
 
